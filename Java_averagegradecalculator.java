@@ -32,8 +32,8 @@ public class Java_averagegradecalculator {
     arr[7] = scan.nextInt();
     
     double max = arr[0];   
-    double avg=0;
-    
+    double avg = 0;
+    double min = arr[0];
     for (int i = 0;i < arr.length; i++)
     {
         avg+=arr[i];
@@ -44,9 +44,19 @@ public class Java_averagegradecalculator {
         }
         
     }
+    for (int i = 0;i > arr.length; i++)
+    {
+        
+        if (min > arr[i])
+        {
+            min = arr[i];    
+        }
+        
+    }
     
     
     System.out.println("Your highest grade is"+max);
+    System.out.println("Your lowest grade is"+min);
     System.out.println("Your total average grade is "+avg/arr.length);
     
     
